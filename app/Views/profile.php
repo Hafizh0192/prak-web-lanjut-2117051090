@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel ="stylesheet"href="<?base_yrl("assets/css/style.css")?>">
   </head>
   <body>
   <div class="text-center">
   <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">My Profile</div>
-  <img src="poto/fikri2.jpg" class="rounded" alt="fikri2" width="200" height=255>
-  <p class="fs-4">Nama  : Fikri Al-Hafizh</p>
-  <p class="fs-4">NPM   : 2117051090</p>
-  <p class="fs-4">Kelas : D</p>
-  <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">-----------------------------------------------------------
+  <img src="<?=base_url("assets/image/fikri2.jpg")?>" class="rounded" alt="fikri2" width="200" height=255>
+  <p class="fs-4">Nama  : <?= $nama?></p>
+  <p class="fs-4">NPM   : <?= $kelas?></p>
+  <p class="fs-4">Kelas : <?= $npm?></p>
+  <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">
+    <img src="<?=base_url("assets/image/s.jpg")?>"alt=""width="200px">
         
   </div>
   
