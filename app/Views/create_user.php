@@ -18,12 +18,29 @@
             <input type="text" name= nama placeholder="Masukan nama" required><br>
         </div> 
 
-        <br><div class="input-box">
-            <input type="text" name = kelas placeholder="Masukan kelas" required><br>
-        </div>
+        <select name="kelas" id="kelas">
+                
+                
+                <?php
+                foreach ($kelas as $item){
+                    ?> 
+                        <option value="<?= $item['id'] ?>">
+                            <?= $item['nama_kelas'] ?>
+                </option>
+                
+
+                <?php
+                }
+
+                ?>
+         </select>
 
          <br><div class="input-box">
-            <input type="text" name = npm placeholder="Masukan npm" required><br>
+            <input type="text" name = npm placeholder="Masukan npm" class="form-control 
+            <?= ($validation->hasError('npm')) ? 'is-invalid' : ''; ?>" id="npm" autofocus>
+            <div class="invalid-feedback">
+            <?= $validation->getError('npm') ?>
+            </div><br>
         </div>
 
         <br><button type="submit" class="btn">Submit</button>
