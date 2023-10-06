@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=base_url("assets/css/style.css")?>">
-    <title>Data User</title>
-</head>
-<body>
+<?= $this->extend('layouts/app') ?>
+<?=$this->section('content') ?>
+
     <div class= "wrapper">
 
         <form action="<?=base_url('/user/store') ?>" method="POST">
@@ -40,7 +33,7 @@
             <?= ($validation->hasError('npm')) ? 'is-invalid' : ''; ?>" id="npm" autofocus>
             <div class="invalid-feedback">
             <?= $validation->getError('npm') ?>
-            </div><br>
+  </div><br>
         </div>
 
         <br><button type="submit" class="btn">Submit</button>
@@ -48,5 +41,4 @@
          </form> 
 </div>
 
-</body>
-</html>
+<?= $this->endSection() ?>
