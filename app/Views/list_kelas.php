@@ -15,17 +15,17 @@
     <tbody>
         <?php
         $no = 1;
-        foreach ($users as $user) {
+        foreach ($user as $u) {
          ?>
             <tr>
                 <td><?=$no++ ?></td>
-                <td><?= $user['nama'] ?> </td>
-                <td><?= $user['npm'] ?> </td>
-                <td><?= $user['nama_kelas'] ?></td>
+                <td><?= $u['nama'] ?> </td>
+                <td><?= $u['npm'] ?> </td>
+                <td><?= $u['nama_kelas'] ?></td>
                 <td class="d-flex">
-                <a class="mx-1 btn btn-info" href="<?= base_url('user/' . $user['id']) ?>">detail</a>
-                <a  href="<?= base_url('user/' . $user['id']).'/edit' ?>" class="btn btn-sm btn-success mx-1">Edit</a>
-                <form action="<?= base_url('user/delete/' . $user['id']) ?>" method="POST">
+                <a class="mx-1 btn btn-info" href="<?= base_url('user/' . $u['id']) ?>">detail</a>
+                <a href="<?= base_url('user/' . $u['id']).'/edit' ?>" class="mx-1 btn btn-sm btn-success">Edit</a>
+                <form action="<?= base_url('user/delete/' . $u['id']) ?>" method="POST">
                             <input type="hidden" name="_method" value="DELETE">
                             <?= csrf_field() ?>
                             <button class="btn btn-danger mx-1" type="submit">Delete</button>
