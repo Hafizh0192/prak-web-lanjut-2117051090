@@ -3,15 +3,15 @@
 
   <div class="text-center">
   <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">My Profile</div>
-  <img src="<?=base_url("assets/image/fikri2.jpg")?>" class="rounded" alt="fikri2" width="200" height=255>
-  <p class="fs-4">Nama  : <?= $nama?></p>
-  <p class="fs-4">NPM   : <?= $npm?></p>
-  <p class="fs-4">Kelas : <?= $id_kelas?></p>
-  <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">
-    <img src="<?=base_url("assets/image/s.jpg")?>"alt=""width="200px">
-        
-  </div>
+
+  <img src="<?= $user['foto'] ?? '<default-foto>' ?>" alt="" width="50%" height="50%">
+
+  <p class="fs-4">Nama  : <?= $user ['nama']?></p>
+  <p class="fs-4">NPM   : <?= $user ['npm']?></p>
+  <p class="fs-4">Kelas : <?= $user ['nama_kelas']?></p>
+  <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark"></div>
   
 </div>
+
 
 <?= $this->endSection() ?>

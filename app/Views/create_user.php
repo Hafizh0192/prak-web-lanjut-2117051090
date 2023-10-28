@@ -3,9 +3,12 @@
 
     <div class= "wrapper">
 
-        <form action="<?=base_url('/user/store') ?>" method="POST">
+        <form action="<?=base_url('/user/store') ?>" method="POST" enctype="multipart/form-data"> 
+
 
         <h1> Data User</h1>
+        
+        <input type="file" name="foto">
 
         <br><div class="input-box">
             <input type="text" name= nama placeholder="Masukan nama" required><br>
